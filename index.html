@@ -5,20 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Genaretor</title>
+
+    <!-- BOOTSTRAP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-<div id="qrcode_container">
-    <h1>QR Code Genaretor</h1>
-    <input type="text" id="qrcode_url">
-    <button id="qrcode_button">Genarate</button><br>
-    <img id="qr_img" alt="">
-</div>
+<body class="bg-light">
 
+    <div id="qrcode_container" class="shadow-lg">
 
+        <h1 class="title">QR Code Generator</h1>
 
+        <input type="text" id="qrcode_url" class="form-control mt-3" placeholder="Enter URL">
 
+        <button id="qrcode_button" class="btn btn-primary mt-3 w-50 mx-auto d-block">
+            Generate
+        </button>
+
+        <img id="qr_img" class="qr_image mt-4" alt="">
+
+        <button id="download_btn" class="btn btn-success mt-3 w-50 mx-auto d-block"
+            style="display:none; margin-bottom: 20px;">
+            Download QR Code
+        </button>
+
+        <div class="marquee">
+            <p>&copy; 2025 Md. Rahim Khan. All rights reserved.</p>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.4.4/qrcode.js"
         integrity="sha512-oxrVyBhqnzQ0BzuM0A/6dEIk0alz0p4SpDRaWvtuUoarIc8rnL5lVniHG5Dp21MRFojcQcmKHjaskNXhSaUPPw=="
